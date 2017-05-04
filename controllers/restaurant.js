@@ -52,7 +52,7 @@ let restaurantControl = {
           let owner = req.body.owner || restaurant.owner;
           let address = req.body.address || restaurant.address;
           let open_status = req.body.open_status || restaurant.open_status;
-          Food.update({_id: req.params.id}, {$set:{
+          Restaurant.update({_id: req.params.id}, {$set:{
             name: name,
             owner: owner,
             address: address,
