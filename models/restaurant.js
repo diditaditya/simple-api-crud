@@ -8,6 +8,6 @@ let restaurantSchema = new Schema({
   open_status: Boolean
 });
 
-let Restaurant = mongoose.model('Restaurant', foodSchema);
+let Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
 module.exports = Restaurant;

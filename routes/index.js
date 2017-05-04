@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const foodControl = require('../controllers/food.js');
+const restaurantControl = require('../controllers/restaurant.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -19,5 +20,10 @@ router.put('/api/foods/:id', foodControl.update);
 router.delete('/api/foods/:id', foodControl.delete);
 
 // restaurant routes
+router.get('/api/restaurants', restaurantControl.showAll);
+router.post('/api/restaurants', restaurantControl.add);
+router.get('/api/restaurants/:id', restaurantControl.showById);
+router.put('/api/restaurants/:id', restaurantControl.update);
+router.delete('/api/restaurants/:id', restaurantControl.delete);
 
 module.exports = router;
